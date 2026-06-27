@@ -93,28 +93,10 @@ body {
 
 /* Responsive */
 
-@media(max-width:768px){
+/* ===========================
+   MOBILE HEADER
+=========================== */
 
-    .header{
-        padding:15px 5%;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .navbar ul{
-        gap:20px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hire-btn{
-        display:none;
-    }
-
-}
-
-
-/* Hide menu icon on desktop */
 #menu-icon{
     display:none;
     font-size:30px;
@@ -122,8 +104,20 @@ body {
     cursor:pointer;
 }
 
-/* Mobile View */
-@media(max-width:768px){
+@media (max-width:768px){
+
+    .header{
+        padding:15px 5%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        background:#08111b;
+        z-index:1000;
+    }
 
     .hire-btn{
         display:none;
@@ -135,7 +129,7 @@ body {
 
     .navbar{
         position:absolute;
-        top:80px;
+        top:70px;
         left:0;
         width:100%;
         background:#08111b;
@@ -147,18 +141,25 @@ body {
     }
 
     .navbar ul{
+        display:flex;
         flex-direction:column;
+        align-items:center;
         gap:0;
+        padding:10px 0;
     }
 
     .navbar ul li{
+        width:100%;
         text-align:center;
         padding:15px 0;
-        border-bottom:1px solid rgba(255,255,255,.1);
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar ul li a{
+        display:block;
+        width:100%;
     }
 }
-
-
 
 
 /* Hero Section */
