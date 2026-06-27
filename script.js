@@ -1,17 +1,13 @@
-const menuIcon = document.getElementById("menu-icon");
-const navbar = document.querySelector(".navbar");
-
-menuIcon.onclick = function(){
-
-    navbar.classList.toggle("active");
-
-    if(navbar.classList.contains("active")){
-        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
-    }else{
-        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-    }
-
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
 }
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+    });
+});
+
 
 
 
