@@ -1,24 +1,17 @@
 const menuIcon = document.getElementById("menu-icon");
 const navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
+menuIcon.onclick = function(){
 
     navbar.classList.toggle("active");
 
-    menuIcon.innerHTML = navbar.classList.contains("active")
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
-};
-
-// Close menu when a link is clicked
-document.querySelectorAll(".navbar a").forEach(link => {
-
-    link.addEventListener("click", () => {
-        navbar.classList.remove("active");
+    if(navbar.classList.contains("active")){
+        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+    }else{
         menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-    });
+    }
 
-});
+}
 
 
 
